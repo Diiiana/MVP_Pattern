@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" style="-fx-background-color: #F1D5BA;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.AdministratorGUI">
+   <children>
+      <Separator layoutX="12.0" layoutY="147.0" prefHeight="0.0" prefWidth="676.0" />
+      <Separator layoutX="12.0" layoutY="346.0" prefHeight="0.0" prefWidth="676.0" />
+      <Button fx:id="viewUsersButton" layoutX="53.0" layoutY="53.0" mnemonicParsing="false" onAction="#viewAllUsers" style="-fx-background-color: #FFFF;" text="View users" />
+      <Text layoutX="30.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add new user" />
+      <TextField fx:id="usernameField" layoutX="329.0" layoutY="154.0" prefHeight="17.0" prefWidth="149.0" />
+      <TextField fx:id="passwordField" layoutX="329.0" layoutY="189.0" prefHeight="16.0" prefWidth="149.0" />
+      <TextField fx:id="roleField" layoutX="329.0" layoutY="222.0" prefHeight="16.0" prefWidth="149.0" />
+      <Text layoutX="243.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" />
+      <Text layoutX="243.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+      <Text layoutX="243.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Role:" />
+      <Button fx:id="addUserButton" layoutX="329.0" layoutY="314.0" mnemonicParsing="false" onAction="#addUser" prefHeight="16.0" prefWidth="42.0" style="-fx-background-color: #FFFF;" text="Save" />
+      <Separator layoutX="8.0" layoutY="540.0" prefHeight="0.0" prefWidth="676.0" />
+      <Text layoutX="30.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update user" />
+      <ComboBox fx:id="selectUser" layoutX="30.0" layoutY="374.0" onAction="#setSelectedUser" onMouseClicked="#fillSelectUser" prefWidth="150.0" promptText="Select user" style="-fx-background-color: #FFFF;" />
+      <Text layoutX="298.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New name:" />
+      <TextField fx:id="newUsernameField" layoutX="404.0" layoutY="361.0" />
+      <Text layoutX="296.0" layoutY="411.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New password:" />
+      <TextField fx:id="newPasswordField" layoutX="404.0" layoutY="394.0" />
+      <Text layoutX="296.0" layoutY="446.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New role:" />
+      <TextField fx:id="newRoleField" layoutX="404.0" layoutY="429.0" />
+      <Button fx:id="updateUserButton" layoutX="370.0" layoutY="505.0" mnemonicParsing="false" onAction="#updateUser" prefHeight="18.0" prefWidth="55.0" style="-fx-background-color: #FFFF;" text="Update" />
+      <Text layoutX="32.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete user" />
+      <ComboBox fx:id="deleteUserComboBox" layoutX="30.0" layoutY="566.0" onMouseClicked="#fillDeleteUser" prefHeight="26.0" prefWidth="423.0" promptText="Select user" style="-fx-background-color: #FFFF;" />
+      <Button fx:id="deleteUserButton" layoutX="204.0" layoutY="624.0" mnemonicParsing="false" onAction="#deleteUser" style="-fx-background-color: #FFFF;" text="Delete" />
+      <Button fx:id="logOutButton" layoutX="625.0" layoutY="661.0" mnemonicParsing="false" onAction="#logOut" style="-fx-background-color: #FFFF;" text="Log out" />
+      <TableView fx:id="tableView" layoutX="169.0" layoutY="15.0" prefHeight="126.0" prefWidth="506.0">
+        <columns>
+          <TableColumn fx:id="usernameColumn" prefWidth="254.4000244140625" text="User" />
+          <TableColumn fx:id="passwordColumn" prefWidth="138.39999389648438" text="Password" />
+            <TableColumn fx:id="roleColumn" prefWidth="98.39990234375" text="Role" />
+        </columns>
+      </TableView>
+      <Label fx:id="invalidDataLabel" layoutX="210.0" layoutY="278.0" prefHeight="35.0" prefWidth="321.0" textFill="RED" />
+      <Label fx:id="updateInvalidData" layoutX="296.0" layoutY="462.0" prefHeight="35.0" prefWidth="278.0" textFill="RED" />
+      <ComboBox fx:id="workplace" layoutX="282.0" layoutY="252.0" onMouseClicked="#fillWorkplace" prefWidth="150.0" promptText="Select Workplace" style="-fx-background-color: #FFFF;" />
+   </children>
+</AnchorPane>
